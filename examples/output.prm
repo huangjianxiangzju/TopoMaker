@@ -1,0 +1,56 @@
+
+[ bondtypes ]
+;      i        j  func           b0           kb
+   Si    oh   1    1.6400e-01    2.9298e+05 ;    SI1 - O1
+   Si    c3   1    1.9000e-01    1.5870e+05 ;    SI1 - C1
+   oh    ho   1    9.7300e-02    3.1079e+05 ;     O1 - H14
+   c3    c3   1    1.5375e-01    2.5179e+05 ;     C1 - C2
+   c3    hc   1    1.0969e-01    2.7665e+05 ;     C1 - H17
+   c3    c3   1    1.5375e-01    2.5179e+05 ;     C2 - C3
+   c3    n4   1    1.5110e-01    2.3707e+05 ;     C3 - N1
+   c3    hx   1    1.0910e-01    2.8342e+05 ;     C3 - H3
+   n4    c3   1    1.5110e-01    2.3707e+05 ;     N1 - C4
+  
+[ angletypes ]
+;      i        j        k  func       theta0       ktheta          ub0          kub
+     Si     oh    ho      1    1.0726e+02    3.9648e+02 ;    SI1 - O1     - H14    
+     Si     c3    c3      1    1.1267e+02    6.6141e+02 ;    SI1 - C1     - C2
+     Si     c3    hc      1    1.1109e+02    2.4075e+02 ;    SI1 - C1     - H17
+     oh     Si    oh      1    1.0782e+02    1.5816e+03 ;     O1 - SI1    - O2
+     oh     Si    c3      1    1.1069e+02    8.3630e+02 ;     O1 - SI1    - C1
+     c3     c3    c3      1    1.1151e+02    5.2635e+02 ;     C1 - C2     - C3
+     c3     c3    hc      1    1.0980e+02    3.8744e+02 ;     C1 - C2     - H1
+     c3     c3    n4      1    1.1421e+02    5.3723e+02 ;     C2 - C3     - N1
+     c3     c3    hx      1    1.1056e+02    3.8660e+02 ;     C2 - C3     - H3
+     c3    n4     c3      1    1.0966e+02    5.2384e+02 ;     C3 - N1     - C4
+     n4     c3    hx      1    1.0801e+02    4.0668e+02 ;     N1 - C3     - H3 
+     hc     c3    hc      1    1.0758e+02    3.2970e+02 ;     H1 - C2     - H2
+     hx     c3    hc      1    1.0975e+02    3.2803e+02 ;     H3 - C3     - H4
+;linker
+     Si    oh     Si      1    1.4646e+02    2.3665e+02
+     oh    Si     oh      1    1.0782e+02    1.5816e+03
+     hx     c3    hx      1    1.0975e+02    3.2803e+02    
+[ dihedraltypes ]
+;      i        j        k        l  func         phi0         kphi  mult
+    Si     c3     c3     c3      9     0.00   0.65084   3 ;    SI1-    C1-    C2-    C3
+    Si     c3     c3     hc      9     0.00   0.65084   3 ;    SI1-    C1-    C2-    H1
+;    oh     Si     c3     hc      9     0.00   0.00000   0 ;     O1-   SI1-    C1-   H18
+    oh     Si     c3     hc      9     0.00   1.04600   1 ;     O1-   SI1-    C1-   H18
+    oh     Si     oh     ho      9     0.00   0.69733   3 ;     O2-   SI1-    O1-   H14
+    oh     Si     c3     c3      9     0.00   0.65084   3 ;     O3-   SI1-    C1-    C2
+    oh     Si     c3     hc      9     0.00   1.04600   1 ;     O3-   SI1-    C1-   H18
+    c3     Si     oh     ho      9     0.00   0.69733   3 ;     C1-   SI1-    O3-   H15    
+    c3     c3     c3     n4      9     0.00   0.65084   3 ;     C1-    C2-    C3-    N1
+    c3     c3     c3     hx      9     0.00   0.65084   3 ;     C1-    C2-    C3-    H3
+    c3     c3     n4     c3      9     0.00   0.65084   3 ;     C2-    C3-    N1-    C4
+    c3     c3     c3     hc      9     0.00   0.66944   3 ;     C3-    C2-    C1-   H18
+    n4     c3     c3     hc      9     0.00   0.65084   3 ;     N1-    C3-    C2-    H2
+    c3     n4     c3     hx      9     0.00   0.65084   3 ;     C4-    N1-    C3-    H3
+    hc     c3     c3     hc      9     0.00   0.62760   3 ;     H1-    C2-    C1-   H17
+    hc     c3     c3     hx      9     0.00   0.65084   3 ;     H1-    C2-    C3-    H3
+;linker
+    Si     oh     Si     oh      9     0.00   0.65084   3
+    oh     Si     oh     Si      9     0.00   0.65084   3
+    Si     oh     Si     c3      9     0.00   0.65084   3
+
+
